@@ -25,12 +25,12 @@
 <body>
 <h1>Add Employee</h1>
 
-<form action="login" method="post">
+<form action="addEmployee" method="post">
     <label for="text">Name: </label>
-    <input type="text" name="un" id="text" placeholder="your name" required><br/>
+    <input type="text" name="un" id="text" placeholder="name" required><br/>
 
-    <label for="password">Password: </label>
-    <input type="password" name="pw" id="password" required><br/>
+    <label for="position">Position: </label>
+    <input type="text" name="pw" id="position" placeholder="position" required><br/>
 
     <input type="submit" value="Add Employee" class="submit">
 

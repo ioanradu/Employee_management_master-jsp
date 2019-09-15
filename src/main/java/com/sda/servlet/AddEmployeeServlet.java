@@ -1,8 +1,9 @@
 package com.sda.servlet;
 
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 
-
-public class AddEmployeeServlet {
+@WebServlet(value = "/addEmployee")
+public class AddEmployeeServlet extends HttpServlet{
 
 }
