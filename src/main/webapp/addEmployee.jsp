@@ -30,7 +30,7 @@
     <input type="text" name="un" id="text" placeholder="name" required><br/>
 
     <label for="position">Position: </label>
-    <input type="text" name="pw" id="position" placeholder="position" required><br/>
+    <input type="text" name="po" id="position" placeholder="position" required><br/>
 
     <input type="submit" value="Add Employee" class="submit">
 
