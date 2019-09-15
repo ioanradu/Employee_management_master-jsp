@@ -14,6 +14,8 @@
 
 <html>
 <head>
+    <base href="${pageContext.request.contextPath}">
+    <link href="css/employees.css" rel="stylesheet" type="text/css">
     <title>Employees</title>
 </head>
 <body>
@@ -25,5 +27,22 @@
 <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
 <%--</c:forEach>--%>
+
+ <table>
+     <tr>
+         <th>Id</th>
+         <th>Name</th>
+         <th>Position</th>
+     </tr>
+     <c:forEach items="${employeeService.employeesList}" var="employee">
+     <tr>
+         <td><c:out value="${employee.getId()}"/></td>
+         <td><c:out value="${employee.getName()}"/></td>
+         <td><c:out value="${employee.getFunction()}"/></td>
+     </tr>
+     </c:forEach>
+
+
+ </table>
 </body>
 </html>

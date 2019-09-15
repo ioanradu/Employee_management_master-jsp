@@ -16,21 +16,28 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%-- <link href="css/loginstyle.css" rel="stylesheet" type="text/css">--%>
+    <base href="${pageContext.request.contextPath}">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
     <title>Login Page</title>
 </head>
 
 <body>
 
-<form action="login" method="post">
+<section>
+    <h1>Sign In</h1>
+    <form action="login" method="post">
+        <label for="text">Name: </label>
+        <input type="text" name="un" id="text" placeholder="your name" required><br/>
 
-    Please enter your username
-    <input type="text" name="un"/><br>
+        <label for="password">Password: </label>
+        <input type="password" name="pw" id="password" required><br/>
 
-    Please enter your password
-    <input type="text" name="pw"/>
+        <input type="submit" value="Sign In" class="submit">
 
-    <input type="submit" value="submit">
-</form>
+    </form>
+
+</section>
 </body>
 </html>

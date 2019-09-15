@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-color: #34eb34;
+}
+section{
+    width: 500px;
+    margin: 50px auto;
+
+}
+
+section img{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    padding: 25px 0;
+    border-top: 1px solid #840F3B;
+    border-bottom: 1px solid #840F3B;
+    width: 315px;
+    margin: 10px auto;
+}
+
+h1{
+    width: 500px;
+    text-align: center;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+input[type="text"], input[type="password"]{
+    border: 2px solid #840F3B;
+    border-radius: 20px;
+    width: 200px;
+    height: 25px;
+    padding-left: 7px;
+}
+
+.submit{
+    margin: 10px auto;
+    margin-bottom: -10px;
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-color: #34b7eb;
+    border: 2px solid #840F3B;
+    font-weight: bold;
+}
+
+form p {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    width: 120px;
+}
