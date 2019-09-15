@@ -1,3 +1,4 @@
+
 img {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -13,9 +14,8 @@ img:hover {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
 }
-
-
 
 .header {
     overflow: hidden;

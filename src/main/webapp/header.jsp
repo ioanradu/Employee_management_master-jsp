@@ -1,4 +1,5 @@
-<%@ page import="com.sda.model.User" %><%--
+<%@ page import="com.sda.model.User" %>
+<%--
   Created by IntelliJ IDEA.
   User: NicolaeA
   Date: 16.02.2019
@@ -9,8 +10,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/loginstyle.css" rel="stylesheet" type="text/css">
-    <link href=".css/style.css" rel="stylesheet" type="text/css">
+   <%-- <link href="css/loginstyle.css" rel="stylesheet" type="text/css">--%>
+    <base href="${pageContext.request.contextPath}">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
