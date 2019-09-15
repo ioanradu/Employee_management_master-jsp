@@ -1,0 +1,19 @@
+table{
+    width: 200px;
+    background-color: beige;
+    text-align: center;
+}
+tr:nth-child(2n+1){
+    background-color: antiquewhite;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    line-height: 50px;
+    background-color: #34b7eb;
+    color: antiquewhite;
+    text-align: center;
+    margin: 20px;
+}

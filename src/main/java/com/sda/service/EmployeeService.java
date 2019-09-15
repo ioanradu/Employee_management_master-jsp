@@ -14,25 +14,17 @@ public class EmployeeService {
 
     private EmployeeDao employeeDao = new EmployeeDao();
 
+    public List<Employee> getEmployeesListFromDao(){
+      List<Employee> employeeList = employeeDao.getEmployeesList();
+      return employeeList;
+    }
+
+
     public Employee findById(Long id) {
 
         return employeeDao.getEntityById(Employee.class, id);
     }
 
-    public List<Employee> getEmployeesList() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        List<Employee> elementList = new ArrayList<>();
-        try {
-            String sql = "from Employee";
-            Query query = session.createQuery(sql, Employee.class);
-            elementList = query.list();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        transaction.commit();
-        session.close();
-        return elementList;
-    }
+
 }
