@@ -25,6 +25,9 @@ public class EmployeeService {
         return employeeDao.getEntityById(Employee.class, id);
     }
 
+    public void saveEmployee(Employee employee){
+        employeeDao.createEntity(employee);
+    }
 
 
 }
