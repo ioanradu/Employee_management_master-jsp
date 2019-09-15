@@ -24,7 +24,7 @@ public class Main {
 
         EmployeeService employeeService = new EmployeeService();
 
-        List<Employee> employeesList = employeeService.getEmployeesList();
+        List<Employee> employeesList = employeeService.getEmployeesListFromDao();
 
     }
 }

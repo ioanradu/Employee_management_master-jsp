@@ -34,9 +34,9 @@
          <th>Name</th>
          <th>Position</th>
      </tr>
-     <c:forEach items="${employeeService.employeesList}" var="employee">
+     <c:forEach items="${employeeService.employeesListFromDao}" var="employee" varStatus="loop">
      <tr>
-         <td><c:out value="${employee.getId()}"/></td>
+         <td><c:out value="${loop.count}"/></td>
          <td><c:out value="${employee.getName()}"/></td>
          <td><c:out value="${employee.getFunction()}"/></td>
      </tr>
@@ -44,5 +44,6 @@
 
 
  </table>
+<a href="addEmployee.jsp" alt="add a new employee"><span>Add Employee</span></a>
 </body>
 </html>
