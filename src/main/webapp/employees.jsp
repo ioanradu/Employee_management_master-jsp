@@ -17,33 +17,41 @@
     <base href="${pageContext.request.contextPath}">
     <link href="css/employees.css" rel="stylesheet" type="text/css">
     <title>Employees</title>
+
 </head>
+<jsp:include page="header.jsp"/>
+
 <body>
-<h1>Employees page!</h1>
-<span><c:out value="${employeeService.findById(1).getName()}"/></span>
-<%--<c:forEach items="${employeeService.findById(1)}" var="employee">--%>
+
+<div class="employees">
+  <h1>Employees</h1>
+    <%--<span> <c:out value="${employeeService.findById(1).getName()}"/> </span> --%>
+  <%--<c:forEach items="${employeeService.findById(1)}" var="employee">--%>
     <%--<span><c:out value="${employee.getName()}"/></span>--%>
-<%--</c:forEach>--%>
-<%--<c:forEach items="${userService.findById(1)}" var="user">--%>
+  <%--</c:forEach>--%>
+  <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
-<%--</c:forEach>--%>
+  <%--</c:forEach>--%>
 
  <table>
      <tr>
          <th>Id</th>
          <th>Name</th>
          <th>Position</th>
+         <th>Department</th>
      </tr>
      <c:forEach items="${employeeService.employeesListFromDao}" var="employee" varStatus="loop">
      <tr>
          <td><c:out value="${loop.count}"/></td>
          <td><c:out value="${employee.getName()}"/></td>
          <td><c:out value="${employee.getFunction()}"/></td>
+         <td><c:out value="${employee.department.name}"/></td>
      </tr>
      </c:forEach>
 
-
  </table>
 <a href="addEmployee.jsp" alt="add a new employee"><span>Add Employee</span></a>
+
+</div>
 </body>
 </html>

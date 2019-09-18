@@ -20,7 +20,7 @@ body {
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 .header a {
@@ -51,6 +51,15 @@ body {
 
 .header-right {
     float: right;
+}
+
+div.center{
+    text-align: center;
+}
+
+span.user{
+    font-weight: bold;
+    font-style: italic;
 }
 
 @media screen and (max-width: 500px) {
