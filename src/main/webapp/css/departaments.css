@@ -1,4 +1,4 @@
-div.employees{
+div.departments{
     display: block;
     width: 600px;
     margin: 0 auto;
@@ -6,7 +6,7 @@ div.employees{
 }
 
 table{
-    width: 400px;
+    width: 250px;
     background-color: beige;
     text-align: center;
     margin: 0 auto;
@@ -16,19 +16,6 @@ table{
 tr:nth-child(1){
     text-decoration: underline;
 }
-
 tr:nth-child(2n+1){
     background-color: antiquewhite;
 }
-
-table + a {
-    text-decoration: none;
-    display: inline-block;
-    width: 150px;
-    line-height: 50px;
-    background-color: #34b7eb;
-    color: antiquewhite;
-    text-align: center;
-    margin: 20px auto;
-}
-

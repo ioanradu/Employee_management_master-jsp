@@ -16,14 +16,14 @@
 
 <div class="header" id="header">
     <a href="#default" class="logo"><img src="/images/logo.png"/></a>
-    <center>
+    <div class="center">
         <% User currentUser = (User) session.getAttribute("currentSessionUser");%>
-        Welcome <%= currentUser.getUsername() %>
-    </center>
+        Welcome <span class="user"><%= currentUser.getUsername() %></span> !
+    </div>
     <div class="header-right">
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="home.jsp">Home</a>
         <a href="employees.jsp">Employees</a>
-        <a href="#departments">Departments</a>
+        <a href="departments.jsp">Departments</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </div>

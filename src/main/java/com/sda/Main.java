@@ -2,8 +2,9 @@ package com.sda;
 
 import com.sda.dao.EmployeeDao;
 import com.sda.dao.UserDao;
-import com.sda.model.Employee;
+import com.sda.model.*;
 import com.sda.model.User;
+import com.sda.service.DepartmentService;
 import com.sda.service.EmployeeService;
 
 import java.util.ArrayList;
@@ -15,16 +16,25 @@ public class Main {
         User user = new User("admin", "admin");
         UserDao userDao = new UserDao();
         userDao.createEntity(user);
+        Department department = new Department();
         Employee employee = new Employee();
+
         employee.setName("Cosmin C");
           EmployeeDao employeeDao = new EmployeeDao();
-//        Employee employee = employeeDao.getEntityById(Employee.class, 1L);
+        //employee = employeeDao.getEntityById(Employee.class, 1L);
         System.out.println(employee.getName());
         employeeDao.createEntity(employee);
 
         EmployeeService employeeService = new EmployeeService();
 
         List<Employee> employeesList = employeeService.getEmployeesListFromDao();
+
+        DepartmentService departmentService = new DepartmentService();
+        List<Department> departmentList = departmentService.getDepartmentsListFromDao();
+
+        for(Department dep : departmentList){
+            System.out.println(dep.getName());
+        }
 
     }
 }

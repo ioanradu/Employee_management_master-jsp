@@ -22,6 +22,7 @@
     <link href="css/login.css" rel="stylesheet" type="text/css">
     <title>Add Employee Page</title>
 </head>
+<jsp:include page="header.jsp"/>
 <body>
 <h1>Add Employee</h1>
 
@@ -32,7 +33,16 @@
     <label for="position">Position: </label>
     <input type="text" name="po" id="position" placeholder="position" required><br/>
 
-    <input type="submit" value="Add Employee" class="submit">
+    <label for="department">Department</label>
+    <select id="department" name="department">
+        <option value="0" >Select an department</option>
+        <option value="1" >Management</option>
+        <option value="2" >Marketing</option>
+        <option value="3" >Sales</option>
+        <option value="4" >HR</option>
+    </select>
+    <br/>
+    <input type="submit" value="Add" class="submit">
 
 </form>
 </body>

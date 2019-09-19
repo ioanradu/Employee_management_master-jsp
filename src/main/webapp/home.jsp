@@ -11,6 +11,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <head>
+    <base href="${pageContext.request.contextPath}">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
     <title>Employees Management</title>
 </head>
 <jsp:include page="header.jsp"/>
