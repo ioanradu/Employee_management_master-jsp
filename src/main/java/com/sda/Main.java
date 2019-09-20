@@ -10,6 +10,7 @@ import com.sda.service.EmployeeService;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class Main {
         Employee employee = new Employee();
 
         employee.setName("Cosmin C");
-          EmployeeDao employeeDao = new EmployeeDao();
+        EmployeeDao employeeDao = new EmployeeDao();
         //employee = employeeDao.getEntityById(Employee.class, 1L);
         System.out.println(employee.getName());
         employeeDao.createEntity(employee);
@@ -32,9 +33,10 @@ public class Main {
         DepartmentService departmentService = new DepartmentService();
         List<Department> departmentList = departmentService.getDepartmentsListFromDao();
 
-        for(Department dep : departmentList){
+        for (Department dep : departmentList) {
             System.out.println(dep.getName());
         }
 
     }
+
 }

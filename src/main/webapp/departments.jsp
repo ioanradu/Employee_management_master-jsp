@@ -11,6 +11,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <jsp:useBean id="departmentService" class="com.sda.service.DepartmentService"></jsp:useBean>
 <jsp:useBean id="userService" class="com.sda.service.UserService"></jsp:useBean>
+
 <html>
 <head>
     <base href="${pageContext.request.contextPath}">
@@ -21,7 +22,7 @@
 
 <body>
 <div class="departments">
-    <h1>Departments</h1>
+    <h1>Available<br/>Departments</h1>
    <%-- <span> <c:out value="${departmentService.findById(1).getName()}"/> </span> --%>
     <table>
         <tr>
