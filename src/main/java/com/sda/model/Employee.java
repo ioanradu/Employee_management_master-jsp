@@ -30,13 +30,6 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @ManyToOne
-    @JoinColumn(name = "manager_id")
-    private Employee manager;
-
-    @OneToMany(mappedBy = "manager", cascade = CascadeType.MERGE)
-    private List<Employee> managerList;
-
     public Employee getManager() {
         return manager;
     }
@@ -83,22 +76,6 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
-    }
-
-    public Employee getManager() {
-        return manager;
-    }
-
-    public void setManager(Employee manager) {
-        this.manager = manager;
-    }
-
-    public List<Employee> getManagerList() {
-        return managerList;
-    }
-
-    public void setManagerList(List<Employee> managerList) {
-        this.managerList = managerList;
     }
 
     @Override
