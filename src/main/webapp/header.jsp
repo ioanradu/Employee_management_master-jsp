@@ -15,7 +15,7 @@
 <body>
 
 <div class="header" id="header">
-    <a href="#default" class="logo"><img src="/images/logo.png"/></a>
+    <a href="home.jsp" class="logo"><img src="/images/logo.png"/></a>
     <div class="center">
         <% User currentUser = (User) session.getAttribute("currentSessionUser");%>
         Welcome <span class="user"><%= currentUser.getUsername() %></span> !
@@ -26,6 +26,7 @@
         <a href="departments.jsp">Departments</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
+
     </div>
 
 </div>

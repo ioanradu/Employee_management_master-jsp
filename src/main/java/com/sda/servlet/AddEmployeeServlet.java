@@ -13,9 +13,11 @@ import java.io.IOException;
 
 @WebServlet(value = "/addEmployee")
 public class AddEmployeeServlet extends HttpServlet {
+
     private EmployeeService employeeService = new EmployeeService();
     private DepartmentDao departmentDao = new DepartmentDao();
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Employee employee = new Employee();
