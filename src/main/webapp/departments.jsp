@@ -36,6 +36,8 @@
         </tr>
         </c:forEach>
     </table>
+<br/>
+<a href="addDepartment.jsp" alt="add a new department"><span>Add department</span></a>
 
 </div>
 

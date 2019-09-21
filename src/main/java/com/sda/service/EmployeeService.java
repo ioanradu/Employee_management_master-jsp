@@ -23,7 +23,6 @@ public class EmployeeService {
     }
 
     public Employee findById(Long id) {
-
         return employeeDao.getEntityById(Employee.class, id);
     }
 
