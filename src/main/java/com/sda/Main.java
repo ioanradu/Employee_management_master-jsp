@@ -17,26 +17,20 @@ public class Main {
         User user = new User("admin", "admin");
         UserDao userDao = new UserDao();
         userDao.createEntity(user);
-        Department department = new Department();
-        Employee employee = new Employee();
 
+        /*Employee employee = new Employee();
         employee.setName("Cosmin C");
         EmployeeDao employeeDao = new EmployeeDao();
-        //employee = employeeDao.getEntityById(Employee.class, 1L);
-        System.out.println(employee.getName());
-        employeeDao.createEntity(employee);
+        employee = employeeDao.getEntityById(Employee.class, 1L);
+        employeeDao.createEntity(employee);*/
 
-        EmployeeService employeeService = new EmployeeService();
-
+        /*EmployeeService employeeService = new EmployeeService();
         List<Employee> employeesList = employeeService.getEmployeesListFromDao();
-
         DepartmentService departmentService = new DepartmentService();
         List<Department> departmentList = departmentService.getDepartmentsListFromDao();
 
         for (Department dep : departmentList) {
             System.out.println(dep.getName());
-        }
-
+        }*/
     }
-
 }

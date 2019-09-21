@@ -33,7 +33,7 @@
     <label for="position">Position: </label>
     <input type="text" name="po" id="position" placeholder="position" required><br/>
 
-    <label for="department">Department</label>
+    <label for="department">Department:</label>
     <select id="department" name="department">
         <option selected>Select an department</option>
         <option value="Management">Management</option>
