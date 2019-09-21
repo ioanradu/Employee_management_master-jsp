@@ -38,6 +38,7 @@
          <th>Id</th>
          <th>Name</th>
          <th>Position</th>
+         <th>Manager</th>
          <th>Department</th>
      </tr>
      <c:forEach items="${employeeService.employeesListFromDao}" var="employee" varStatus="loop">
@@ -45,6 +46,10 @@
          <td><c:out value="${loop.count}"/></td>
          <td><c:out value="${employee.getName()}"/></td>
          <td><c:out value="${employee.getFunction()}"/></td>
+
+         <td><a href="employeesOfManager.jsp?id=${employee.manager.id}" alt="employees-of-manager">
+             <c:out value="${employee.getManager().getName()}"/></a>
+         </td>
          <td><c:out value="${employee.department.name}"/></td>
      </tr>
      </c:forEach>

@@ -1,6 +1,8 @@
 package com.sda.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="employees")
@@ -14,8 +16,15 @@ public class Employee {
     @Column(name = "name", length = 40)
     private String name;
 
-    @Column(name="position")
+    @Column(name = "position")
     private String function;
+
+    @ManyToOne
+    @JoinColumn(name = "manager_id")
+    private Employee manager;
+
+    @OneToMany(mappedBy = "manager")
+    private List<Employee> managerList;
 
     @ManyToOne
     @JoinColumn(name = "department_id")
@@ -53,4 +62,28 @@ public class Employee {
         this.department = department;
     }
 
+    public Employee getManager() {
+        return manager;
+    }
+
+    public void setManager(Employee manager) {
+        this.manager = manager;
+    }
+
+    public List<Employee> getManagerList() {
+        return managerList;
+    }
+
+    public void setManagerList(List<Employee> managerList) {
+        this.managerList = managerList;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
+
+
+
+
