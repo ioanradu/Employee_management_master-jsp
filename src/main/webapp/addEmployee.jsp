@@ -42,6 +42,7 @@
         <option value="HR">HR</option>
     </select>
     <br/>
+
     <input type="submit" value="Add" class="submit">
 
 </form>
