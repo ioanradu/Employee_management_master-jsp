@@ -15,6 +15,7 @@ public class GenericDao<T> {
         transaction.commit();
         session.close();
     }
+
     public T getEntityById(Class<T> cls, Long id){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

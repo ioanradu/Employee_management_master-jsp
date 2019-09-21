@@ -18,5 +18,4 @@ public class DepartmentService {
 
         return departmentDao.getEntityById(Department.class, id);
     }
-
 }

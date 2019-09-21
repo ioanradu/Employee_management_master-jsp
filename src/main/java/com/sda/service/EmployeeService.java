@@ -1,6 +1,8 @@
 package com.sda.service;
 
+import com.sda.dao.DepartmentDao;
 import com.sda.dao.EmployeeDao;
+import com.sda.model.Department;
 import com.sda.model.Employee;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
@@ -13,12 +15,12 @@ import java.util.List;
 public class EmployeeService {
 
     private EmployeeDao employeeDao = new EmployeeDao();
+    private DepartmentDao departmentDao = new DepartmentDao();
 
     public List<Employee> getEmployeesListFromDao(){
-      List<Employee> employeeList = employeeDao.getEmployeesList();
-      return employeeList;
+        List<Employee> employeeList = employeeDao.getEmployeesList();
+        return employeeList;
     }
-
 
     public Employee findById(Long id) {
 
@@ -28,6 +30,4 @@ public class EmployeeService {
     public void saveEmployee(Employee employee){
         employeeDao.createEntity(employee);
     }
-
-
 }

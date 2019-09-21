@@ -1,5 +1,6 @@
 package com.sda.servlet;
 
+import com.sda.dao.DepartmentDao;
 import com.sda.model.Department;
 import com.sda.model.Employee;
 import com.sda.service.EmployeeService;
@@ -11,26 +12,26 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(value = "/addEmployee")
-public class AddEmployeeServlet extends HttpServlet{
-  private EmployeeService employeeService = new EmployeeService();
+public class AddEmployeeServlet extends HttpServlet {
+    private EmployeeService employeeService = new EmployeeService();
+    private DepartmentDao departmentDao = new DepartmentDao();
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        Employee employee = new Employee();
         String text = request.getParameter("un");
         String position = request.getParameter("po");
-        //String departmentName = request.getParameter("department");
+        String departmentName = request.getParameter("department");
 
-        int department=Integer.parseInt(request.getParameter("department"));
+        Department department = departmentDao.getDepartmentByName(departmentName);
 
-       /* if(request.getParameter("department")!=null)
-        {
-
-        }*/
-        Employee employee = new Employee();
         employee.setName(text);
         employee.setFunction(position);
-       // employee.setDepartment(department);
+        employee.setDepartment(department);
 
-        employeeService.saveEmployee(employee);
-        response.sendRedirect("home.jsp");
+        if (employee != null) {
+            employeeService.saveEmployee(employee);
+            response.sendRedirect("employees.jsp");
+        }
     }
 }

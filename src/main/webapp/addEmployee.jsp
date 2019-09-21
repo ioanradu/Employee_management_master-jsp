@@ -10,8 +10,7 @@
          pageEncoding="windows-1256"
 %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -24,6 +23,7 @@
 </head>
 <jsp:include page="header.jsp"/>
 <body>
+<section>
 <h1>Add Employee</h1>
 
 <form action="addEmployee" method="post">
@@ -35,15 +35,16 @@
 
     <label for="department">Department</label>
     <select id="department" name="department">
-        <option value="0" >Select an department</option>
-        <option value="1" >Management</option>
-        <option value="2" >Marketing</option>
-        <option value="3" >Sales</option>
-        <option value="4" >HR</option>
+        <option selected>Select an department</option>
+        <option value="Management">Management</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Sales">Sales</option>
+        <option value="HR">HR</option>
     </select>
     <br/>
     <input type="submit" value="Add" class="submit">
 
 </form>
+</section>
 </body>
 </html>

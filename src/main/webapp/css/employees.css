@@ -25,10 +25,14 @@ table + a {
     text-decoration: none;
     display: inline-block;
     width: 150px;
-    line-height: 50px;
+    line-height: 30px;
     background-color: #34b7eb;
     color: antiquewhite;
+    font-size: 13px;
     text-align: center;
     margin: 20px auto;
+    border: 2px solid #840F3B;
+    color: black;
+    font-weight: bold;
 }
 
