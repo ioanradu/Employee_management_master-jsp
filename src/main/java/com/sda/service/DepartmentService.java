@@ -18,4 +18,8 @@ public class DepartmentService {
 
         return departmentDao.getEntityById(Department.class, id);
     }
+
+    public void saveDepartment(Department department){
+        departmentDao.createEntity(department);
+    }
 }

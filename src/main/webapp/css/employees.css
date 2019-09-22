@@ -6,13 +6,16 @@ div.employees{
 }
 
 table{
-    width: 400px;
+    width: 500px;
     background-color: #f1f1f1;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid #840F3B;
+    /*border: 2px solid #840F3B;*/
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
     padding: 3px;
 }
+
+
 tr:nth-child(1){
     text-decoration: underline;
 }
@@ -27,12 +30,16 @@ table + a {
     width: 150px;
     line-height: 30px;
     background-color: #34b7eb;
-    color: antiquewhite;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
     font-size: 13px;
     text-align: center;
     margin: 20px auto;
-    border: 2px solid #840F3B;
+    /*border: 2px solid #840F3B;*/
+    border-radius: 20px;
     color: black;
     font-weight: bold;
 }
 
+table.manager{
+    width: 300px;
+}

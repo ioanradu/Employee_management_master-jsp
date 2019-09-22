@@ -4,6 +4,14 @@
 body {
     background-color: aquamarine;
 }
+*:active {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
 section{
     width: 500px;
     margin: 50px auto;
@@ -40,7 +48,9 @@ label{
 }
 
 input[type="text"], input[type="password"]{
-    border: 2px solid #840F3B;
+    /*border: 1px solid #840F3B;*/
+    border: none;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
     border-radius: 20px;
     width: 200px;
     height: 25px;
@@ -51,8 +61,10 @@ label[for="department"]{
 }
 
 select{
-    border: 2px solid #840F3B;
+    /*border: 2px solid #840F3B;*/
+    border: none;
     border-radius: 20px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
     height: 25px;
 }
 
@@ -63,8 +75,12 @@ select{
     width: 150px;
     height: 30px;
     background-color: #34b7eb;
-    border: 2px solid #840F3B;
+    box-shadow: 0 10px 20px -8px #34b7eb;
+    border: none;
+    /*border: 2px solid #840F3B;*/
     font-weight: bold;
+    border-radius: 20px;
+
 }
 
 form p {

@@ -10,7 +10,8 @@ table{
     background-color: #f1f1f1;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid #840F3B;
+    /*border: 2px solid #840F3B;*/
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
     padding: 3px;
 }
 tr:nth-child(1){
@@ -19,4 +20,19 @@ tr:nth-child(1){
 tr:nth-child(2n+1){
    /* background-color: antiquewhite; */
     background-color: #dfe6e8;
+}
+table + a {
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    line-height: 30px;
+    background-color: #34b7eb;
+    font-size: 13px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    border-radius: 20px;
+    /*border: 2px solid #840F3B;*/
+    color: black;
+    font-weight: bold;
 }

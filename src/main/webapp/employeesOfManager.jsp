@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.sda.model.Employee" %><%--
   Created by IntelliJ IDEA.
   User: Ioan Radu
@@ -8,8 +9,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="employeeService" class="com.sda.service.EmployeeService"></jsp:useBean>
 <jsp:useBean id="userService" class="com.sda.service.UserService"></jsp:useBean>
-<!Doctype html>
 
+<!Doctype html>
 <html>
 <head>
     <base href="${pageContext.request.contextPath}">
@@ -20,19 +21,19 @@
 <jsp:include page="header.jsp"/>
 <body>
 <div>
-    ${manager.name}
 
-    <table>
+    <h1>Employees of the ${manager.name} !</h1>
+    <table class="manager">
         <tr>
             <th>Id</th>
             <th>Name</th>
         </tr>
-        <c:foreach items="${manager.managerList}" var="employee" varStatus="loop">
+        <c:forEach items="${manager.managerList}" var="employee" varStatus="loop">
             <tr>
-            <td>${loop.count}</td>
-            <td>${employee.name}</td>
+                <td>${loop.count}</td>
+                <td>${employee.name}</td>
             </tr>
-
+        </c:forEach>
     </table>
 
 </div>
