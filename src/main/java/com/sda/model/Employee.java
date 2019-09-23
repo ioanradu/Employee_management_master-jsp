@@ -30,6 +30,22 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
+    public Employee getManager() {
+        return manager;
+    }
+
+    public void setManager(Employee manager) {
+        this.manager = manager;
+    }
+
+    public List<Employee> getManagerList() {
+        return managerList;
+    }
+
+    public void setManagerList(List<Employee> managerList) {
+        this.managerList = managerList;
+    }
+
     public Long getId() {
         return id;
     }
@@ -60,22 +76,6 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
-    }
-
-    public Employee getManager() {
-        return manager;
-    }
-
-    public void setManager(Employee manager) {
-        this.manager = manager;
-    }
-
-    public List<Employee> getManagerList() {
-        return managerList;
-    }
-
-    public void setManagerList(List<Employee> managerList) {
-        this.managerList = managerList;
     }
 
     @Override
