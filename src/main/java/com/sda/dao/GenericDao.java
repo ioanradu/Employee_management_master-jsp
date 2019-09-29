@@ -23,6 +23,17 @@ public class GenericDao<T> {
         T entity = session.get(cls, id);
 
         transaction.commit();
+        //session.close();
+        return entity;
+    }
+
+    public T deleteEntityById(Class<T> cls, Long id){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        T entity = session.get(cls, id);
+
+        transaction.commit();
         session.close();
         return entity;
     }

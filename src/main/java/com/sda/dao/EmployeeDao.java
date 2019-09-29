@@ -41,12 +41,9 @@ public class EmployeeDao extends GenericDao<Employee>{
             query.setParameter("name",name);
             query.setParameter("department",department);
             query.setParameter("position", position);
-            //System.out.println("------------>" +id);
-            //if(id.length()>0) {
             Long employeeId = Long.parseLong(id);
             query.setParameter("id", employeeId);
             query.executeUpdate();
-            //}
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -61,7 +58,7 @@ public class EmployeeDao extends GenericDao<Employee>{
         boolean validator = false;
 
         try {
-            Employee employee = getEntityById(Employee.class,employeeId);
+            Employee employee = deleteEntityById(Employee.class,employeeId);
             if (employee!=null){
                 session.delete(employee);
                 System.out.println("-----? sters");
