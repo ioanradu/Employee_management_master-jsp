@@ -69,17 +69,17 @@ select{
 }
 
 .submit{
-    margin: 10px auto;
-    margin-bottom: -10px;
+    margin: 10px auto -10px auto;
     display: block;
     width: 150px;
     height: 30px;
     background-color: #34b7eb;
-    box-shadow: 0 10px 20px -8px #34b7eb;
     border: none;
+    box-shadow: 0 13px 20px -8px #34b7eb;
     /*border: 2px solid #840F3B;*/
     font-weight: bold;
     border-radius: 20px;
+    cursor: pointer;
 
 }
 

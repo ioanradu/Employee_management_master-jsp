@@ -1,5 +1,6 @@
 package com.sda.dao;
 
+import com.sda.model.Department;
 import com.sda.model.Employee;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
@@ -27,4 +28,55 @@ public class EmployeeDao extends GenericDao<Employee>{
         session.close();
         return elementList;
     }
+
+    public void editEmployee(String id, String name, String position, Department department){
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        try {
+            String sql = "update Employee SET name =:name, function=:position, department =:department"
+                    + " where id =:id";
+            Query query = session.createQuery(sql);
+            query.setParameter("name",name);
+            query.setParameter("department",department);
+            query.setParameter("position", position);
+            //System.out.println("------------>" +id);
+            //if(id.length()>0) {
+            Long employeeId = Long.parseLong(id);
+            query.setParameter("id", employeeId);
+            query.executeUpdate();
+            //}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        transaction.commit();
+        session.close();
+    }
+
+    public boolean deleteEntity(Long employeeId) {
+        System.out.println("Hello Delete Entity");
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        boolean validator = false;
+
+        try {
+            Employee employee = getEntityById(Employee.class,employeeId);
+            if (employee!=null){
+                session.delete(employee);
+                System.out.println("-----? sters");
+                validator = true;
+            }else{
+                System.out.println("-----? fail");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        transaction.commit();
+        session.close();
+        return validator;
+    }
+
 }

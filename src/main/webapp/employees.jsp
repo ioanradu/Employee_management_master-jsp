@@ -40,6 +40,7 @@
             <th>Position</th>
             <th>Manager</th>
             <th>Department</th>
+            <th>Action</th>
         </tr>
         <c:forEach items="${employeeService.employeesListFromDao}" var="employee" varStatus="loop">
             <tr>
@@ -51,12 +52,17 @@
                     <c:out value="${employee.getManager().getName()}"/></a>
                 </td>
                 <td><c:out value="${employee.department.name}"/></td>
+
+                <td>
+                    <span><a href="deleteEmployee?action=deleteEmployee&id=${employee.getId()}" class="small">Delete</a></span>
+
+                    <span><a href="updateEmployee?action=updateEmployee&id=${employee.getId()}" class="small">Update</a></span>
+                </td>
             </tr>
         </c:forEach>
 
     </table>
-    <a href="addEmployee.jsp" alt="add a new employee"><span>Add Employee</span></a>
-
+    <a href="addEmployee.jsp" class="employee" alt="add a new employee"><span>Add Employee</span></a>
 
 </div>
 </body>

@@ -29,4 +29,23 @@ public class EmployeeService {
     public void saveEmployee(Employee employee){
         employeeDao.createEntity(employee);
     }
+
+    public boolean updateEmployee(Employee employee) {
+        boolean updated = false;
+        Employee entity = employeeDao.updateEntity(employee);
+        if (employee != null) {
+            updated = true;
+        }
+        return updated;
+    }
+
+    public void editEmployee(String id, String name, String position, String departmentName) {
+        Department department = departmentDao.getDepartmentByName(departmentName);
+        employeeDao.editEmployee(id, name, position, department);
+    }
+
+    public boolean deleteEmployee(Employee employee) {
+        System.out.println("Delete Response");
+        return employeeDao.deleteEntity(employee.getId());
+    }
 }

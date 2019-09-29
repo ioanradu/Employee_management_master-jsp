@@ -1,12 +1,12 @@
 div.employees{
     display: block;
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
 table{
-    width: 500px;
+    width: 700px;
     background-color: #f1f1f1;
     text-align: center;
     margin: 0 auto;
@@ -24,7 +24,7 @@ tr:nth-child(2n+1){
     background-color: #dfe6e8;
 }
 
-table + a {
+a.employee {
     text-decoration: none;
     display: inline-block;
     width: 150px;
@@ -38,6 +38,26 @@ table + a {
     border-radius: 20px;
     color: black;
     font-weight: bold;
+}
+
+.small{
+    display: inline-block;
+    line-height: 20px;
+    width: 80px;
+    margin: 3px auto;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: #34b7eb;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    font-size: 13px;
+    text-align: center;
+    /*border: 2px solid #840F3B;*/
+    border-radius: 20px;
+    color: black;
+    margin-right: 6px;
+}
+.small + .small {
+     margin-right: 0;
 }
 
 table.manager{

@@ -23,7 +23,7 @@ public class GenericDao<T> {
         T entity = session.get(cls, id);
 
         transaction.commit();
-        //session.close();
+        session.close();
         return entity;
     }
 
