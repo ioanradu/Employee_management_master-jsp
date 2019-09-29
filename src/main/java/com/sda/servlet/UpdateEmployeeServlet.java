@@ -22,13 +22,9 @@ public class UpdateEmployeeServlet extends HttpServlet {
 
         EmployeeService employeeService = new EmployeeService();
         String employeeId = request.getParameter("id");
-        System.out.println(employeeId);
         String name = request.getParameter("un");
-        System.out.println(name);
         String position = request.getParameter("po");
-        System.out.println(position);
         String departmentName = request.getParameter("department");
-        System.out.println(departmentName);
 
         employeeService.editEmployee(employeeId, name, position, departmentName);
         try {

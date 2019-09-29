@@ -24,19 +24,16 @@ public class DeleteEmployeesServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         String employeeId = request.getParameter("id");
-        System.out.println(employeeId);
         Employee employee = employeeService.findById(
                 Long.parseLong(employeeId));
-
-        System.out.println(employeeId);
         try {
             if (employeeService.deleteEmployee(employee)) {
                 response.sendRedirect("/employees.jsp");
-            }else{
+            } else {
                 response.sendRedirect("/deleteEmployeeFailed.jsp");
             }
         } catch (IOException e) {
-            System.out.println(e);        }
-
+            System.out.println(e);
+        }
     }
 }

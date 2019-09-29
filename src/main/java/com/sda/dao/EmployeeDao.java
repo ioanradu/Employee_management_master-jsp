@@ -52,19 +52,16 @@ public class EmployeeDao extends GenericDao<Employee>{
     }
 
     public boolean deleteEntity(Long employeeId) {
-        System.out.println("Hello Delete Entity");
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         boolean validator = false;
-
         try {
             Employee employee = deleteEntityById(Employee.class,employeeId);
             if (employee!=null){
                 session.delete(employee);
-                System.out.println("-----? sters");
                 validator = true;
             }else{
-                System.out.println("-----? fail");
+                System.out.println("The employees could not be deleted!");
             }
 
         } catch (Exception e) {

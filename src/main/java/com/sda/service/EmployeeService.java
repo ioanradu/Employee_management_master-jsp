@@ -45,7 +45,6 @@ public class EmployeeService {
     }
 
     public boolean deleteEmployee(Employee employee) {
-        System.out.println("Delete Response");
         return employeeDao.deleteEntity(employee.getId());
     }
 }

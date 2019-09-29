@@ -24,7 +24,6 @@ public class UpdateEmployee extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         String employeeId = request.getParameter("id");
         Employee employee = employeeService.findById(Long.parseLong(employeeId));
-         System.out.println(employee);
         request.setAttribute("employee", employee);
         RequestDispatcher rd = request.getRequestDispatcher("updateEmployee.jsp");
         try {
